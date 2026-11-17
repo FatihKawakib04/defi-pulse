@@ -3,12 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Token Radar: pre-token protocols ranked by implied value</title>
+<title>Token Radar — pre-token protocols ranked by implied value</title>
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
 <a class="skip" href="#board">Skip to the board</a>
-<main id="board" tabindex="-1" aria-busy="true"></main>
+<div class="app" id="board" aria-busy="true">
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <div class="brand">
+        <span class="scope" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>
+          <b class="wordmark">TOKEN RADAR</b>
+          <span class="tagline">pre-token protocols, ranked by what a token could be worth</span>
+        </span>
+      </div>
+      <dl class="snap" id="snap"></dl>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="brief" id="brief"></section>
+    <section class="modelbar" id="modelbar"></section>
+    <section class="controls" id="controls" aria-label="Filter the board"></section>
+    <section class="board" id="boardpanel" aria-live="polite"></section>
+    <section class="method" id="method"></section>
+  </main>
+  <footer class="wrap foot" id="foot"></footer>
+</div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden></div>
 <script src="../data.js"></script>
 <script src="app.js"></script>
 </body>
